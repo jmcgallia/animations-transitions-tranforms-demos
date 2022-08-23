@@ -1,4 +1,5 @@
 import './App.css';
+import {Link} from "react-router-dom";
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
       </p>
 
       <ul>
-        <li>Top-menu toggle</li>
+        <li><Link to={"/topMenuToggle"}>Top-menu toggle</Link></li>
         <li>Side-menu toggle</li>
         <li>Image revolver</li>
         <li>Side-swipe modal</li>
+        
       </ul>
    
     </div>
