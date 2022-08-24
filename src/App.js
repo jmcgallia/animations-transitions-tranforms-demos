@@ -14,7 +14,7 @@ function App() {
 
       <ul>
         <li><Link to={"/topMenuToggle"}>Top-menu toggle</Link></li>
-        <li>Side-menu toggle</li>
+        <li><Link to={"/sideMenu"}>Side-menu</Link></li>
         <li>Image revolver</li>
         <li>Side-swipe modal</li>
         

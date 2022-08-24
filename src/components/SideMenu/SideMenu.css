@@ -1,0 +1,116 @@
+/* The anestor of whole page */
+
+.sm {
+  height: fit-content;
+
+  display: grid;
+  grid-template-columns: 100px 9fr;
+  grid-template-rows: 100px 1fr;
+}
+
+/* Content area */
+
+.sm .content {
+  padding: 50px;
+  background-color: antiquewhite;
+
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* Default siteNav */
+
+.sm .siteNav {
+  height: 100px;
+  background-color: crimson;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  justify-items: center;
+  align-items: center;
+}
+
+.sm .siteNavToggleButton {
+  height: 100%;
+  width: 100%;
+  grid-column: 3 / 4;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.sm .siteNavToggleButton button {
+  height: 50px;
+  width: 50px;
+}
+
+.sm .siteNavHeader {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2
+}
+
+
+
+
+
+/* Default sideNav, when > 600 px */
+
+.sm .pageNav {
+  background-color: rgb(82, 77, 72);
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 100px;
+
+  position: relative;
+
+}
+
+.sm .navButton {
+  border-bottom: 1px solid antiquewhite;
+  border-right: 1px solid antiquewhite;
+}
+
+.sm .navButton:first-child{
+  border-top: 1px solid antiquewhite;
+}
+
+.sm .navButton:hover {
+  background-color: rgb(161, 152, 143);
+}
+
+.sm .navButton.active {
+  background-color: rgb(161, 152, 143);
+}
+
+/* The menus that come out from the sideNav */
+
+.sm .navMenu {
+  
+  position: absolute;
+  right: 0px;
+  transform: translateX(-100px);
+
+  width: 50vw;
+  height: 100%;
+  background-color: rgb(82, 77, 72);;
+
+  transition-duration: 200ms;
+  transition-property: transform;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+.sm .navMenu.shown {
+  transform: translateX(100%);
+}
+
+
+ 
+
+
