@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/animations-transitions-tranforms-demos/static/css/main.77f75149.css",
+    "main.js": "/animations-transitions-tranforms-demos/static/js/main.e9b1cc8c.js",
+    "index.html": "/animations-transitions-tranforms-demos/index.html",
+    "main.77f75149.css.map": "/animations-transitions-tranforms-demos/static/css/main.77f75149.css.map",
+    "main.e9b1cc8c.js.map": "/animations-transitions-tranforms-demos/static/js/main.e9b1cc8c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77f75149.css",
+    "static/js/main.e9b1cc8c.js"
+  ]
+}
