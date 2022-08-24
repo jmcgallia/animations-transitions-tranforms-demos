@@ -1,11 +1,16 @@
 /* The anestor of whole page */
 
+
+body {
+  width: 100%;
+}
+
 .sm {
   height: fit-content;
 
   display: grid;
   grid-template-columns: 100px 9fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 100px 1fr 100px;
 }
 
 /* Content area */
@@ -74,15 +79,46 @@
 .sm .navButton {
   border-bottom: 1px solid antiquewhite;
   border-right: 1px solid antiquewhite;
+
+  /* From stackOverFlow */
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  /* end */
+
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 5fr 5fr;
+
+  color: antiquewhite;
+}
+
+.sm .navButton h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 60px;
+}
+
+.sm .navButton p {
+  align-self: start;
 }
 
 .sm .navButton:first-child{
   border-top: 1px solid antiquewhite;
 }
 
-.sm .navButton:hover {
-  background-color: rgb(161, 152, 143);
+.sm .navButton > * {
+  pointer-events: none;
 }
+
+/* Only hover button on mobile */
+@media screen and (min-width: 450px) {
+  .sm .navButton:hover {
+    background-color: rgb(161, 152, 143);
+  }
+}
+
 
 .sm .navButton.active {
   background-color: rgb(161, 152, 143);
@@ -106,11 +142,32 @@
   transition-delay: 0s;
 }
 
+@media screen and (max-width: 450px) {
+  .sm .navMenu1 {
+    width: calc(100vw - 100px);
+  }
+}
+
 .sm .navMenu.shown {
   transform: translateX(100%);
 }
 
+/* Footer */ 
 
+.sm footer {
+  height: 100px;
+  background-color: crimson;
+  grid-column: 1 / 3;
+  grid-row: 3/4;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25px 25px 25px;
+  align-content: center;
+
+  justify-items: center;
+  align-items: center;
+}
  
 
 

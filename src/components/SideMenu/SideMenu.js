@@ -71,6 +71,20 @@ function SideMenu() {
     }  
   }
 
+  /* The content for the nav buttons and their menus */
+  let createButtonContent = function(symbol, name) {
+    return (
+      <><h2>{symbol}</h2><p>{name}</p></>
+    )
+  }
+
+
+  let buttonOneContent = createButtonContent('H','Languages');
+  let buttonTwoContent = createButtonContent("C", "Colours");
+  let buttonThreeContent = createButtonContent("A", "About");
+  let buttonFourContent = createButtonContent("O", "Other");
+  let menuOneContent = <><h2>This is menu 1</h2></>
+
 
 
   return (
@@ -81,16 +95,20 @@ function SideMenu() {
             <button>T</button>
           </div>
           <div className="siteNavHeader">
-            <h1>The Website Name</h1>
+            <h1>Demo Website</h1>
           </div>
         </nav>
 
 
         <nav className="pageNav">  
-          <NavItem onClicked={onPageMenuButtonClicked} content="menu1" id={1}></NavItem>
-          <NavItem onClicked={onPageMenuButtonClicked} content="menu2" id={2}></NavItem>
-          <NavItem onClicked={onPageMenuButtonClicked} content="menu3" id={3}></NavItem>
-          <NavItem onClicked={onPageMenuButtonClicked} content="menu4" id={4}></NavItem>
+          <NavItem onClicked={onPageMenuButtonClicked} 
+          buttonContent={buttonOneContent} menuContent={menuOneContent} id={1}></NavItem>
+          <NavItem onClicked={onPageMenuButtonClicked} 
+          buttonContent={buttonTwoContent} id={2}></NavItem>
+          <NavItem onClicked={onPageMenuButtonClicked} 
+          buttonContent={buttonThreeContent} id={3}></NavItem>
+          <NavItem onClicked={onPageMenuButtonClicked} 
+          buttonContent={buttonFourContent} id={4}></NavItem>
         </nav>
 
         <div className="content">
@@ -99,15 +117,15 @@ function SideMenu() {
           <p>Some content under the subheader, which is cool</p>
           <p>And another paragraph</p>
           <h2>The second subheader</h2>
-          <p>This section iaadfafdafasdfasdfasdfasdfasdf
-            asdfadfdasfasdafadsfasfas
-            asdfasfasfafasdfasdfasfasdf
-            asdfasdfasfasfasfasdf
-            asdfasdfasfasfasdfa
+          <p>This section iaadfafd afasdfa sdfasd fasdf asdf
+            asd fad fdasfas dafads fa sfas
+            asdfas fasfaf asdfa sdfas fasdf
+            asd fas dfas fasf asfa sdf
+            asdfas dfasfasfa sdfa
             asdfasfasd
             fas
             dfas
-            fdasfncludes a list!</p>
+            fdas fncludes a list!</p>
           <ul>
             <li>Item 1</li>
             <li>Item 2</li>
@@ -146,7 +164,17 @@ function SideMenu() {
           <h1>aaaaaaa</h1>
           <h1>aaaaaaa</h1>
           <h1>aaaaaaa</h1>
+          <h1>aaaaaaa</h1>
+          <h1>aaaaaaa</h1>
+
+
         </div>
+
+        <footer>
+          <p><a>@Jordan McGalliard</a></p>
+          <p><a href="https://github.com/jordan-mcgalliard">Github</a></p>
+          <p><a href="https://github.com/jordan-mcgalliard/animations-transitions-tranforms-demos">App Source</a></p>
+        </footer>
 
     </div>
 
